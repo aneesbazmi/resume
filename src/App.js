@@ -1,24 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import ResumeBuilder from './components/resume';
 
 function App() {
+  let resume = {
+    interests: ['Drawing', 'Photography', 'design', 'programming', 'computer science'],
+    experience : [ { year:2012, company:'xyz', role:'something' }],
+    education:[ ],
+    skills : [ 'react js', 'node js'],
+    extracurriculars : ['recycling club', 'gardening club', 'book club']
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ResumeBuilder {...resume} ></ResumeBuilder>
+      </div>
   );
 }
 
